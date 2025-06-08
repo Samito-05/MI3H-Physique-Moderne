@@ -105,7 +105,7 @@ def create_animation(x, V, final_densite, nd, params):
     ani = animation.FuncAnimation(fig, animate, init_func=init, frames=nd, interval=100, blit=True)
     plt.show()
 
-    filename = "propagation_paquet_onde.gif"
+    filename = f"propagation_paquet_onde.gif"
     ani.save(filename, writer="pillow")
     print(f"Animation sauvegardée sous '{filename}'.")
 
@@ -146,7 +146,7 @@ def solve_stationary_states(params, x):
     plt.legend()
     plt.grid()
     plt.tight_layout()
-    plt.savefig("etats_stationnaires.png")
+    plt.savefig(f"etats_stationnaires.png")
     plt.show()
 
 # === Exécution principale ===
